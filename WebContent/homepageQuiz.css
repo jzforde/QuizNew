@@ -1,0 +1,29 @@
+
+.button {
+    display: inline-block;
+    padding: 1em;
+    background-color: #6600ff;
+    text-decoration: none;
+    color: white;
+    margin-left: 500px;
+    margin-top: 400px;
+    max-width: 100%;
+    width: 200px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 25px;
+}
+h1{
+	background-color: white;
+	font-family: arial;
+	text-align: center;
+	margin-top: -150px;
+	font-size: 36px;
+	max-width: 100%;
+	position: relative;
+   }
+
+}
+
+
+

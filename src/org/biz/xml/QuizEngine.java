@@ -17,30 +17,60 @@ public class QuizEngine
     {
         questions = new ArrayList<> ();
         List<Option> optionsForQuestion1 = new ArrayList<> ();
-        optionsForQuestion1.add (new Option (true, "Paramaribo"));
-        optionsForQuestion1.add (new Option (false, "Moengo"));
-        optionsForQuestion1.add (new Option (false, "Albina"));
-        optionsForQuestion1.add (new Option (false, "Kourou"));
+        optionsForQuestion1.add (new Option (true, "cavort"));
+        optionsForQuestion1.add (new Option (false, "obsolesence"));
+        optionsForQuestion1.add (new Option (false, "definiens"));
+        optionsForQuestion1.add (new Option (false, "shivaree"));
         Question question1 = new Question (1,
-            "What is the capital of Suriname?", optionsForQuestion1);
+            "To prance or jump around excitedly", optionsForQuestion1);
         questions.add (question1);
 
         List<Option> optionsForQuestion2 = new ArrayList<> ();
-        optionsForQuestion2.add (new Option (false, "England"));
-        optionsForQuestion2.add (new Option (true, "Spain"));
-        optionsForQuestion2.add (new Option (false, "Australia"));
-        optionsForQuestion2.add (new Option (false, "Germany"));
+        optionsForQuestion2.add (new Option (false, "telesthesia"));
+        optionsForQuestion2.add (new Option (true, "aggrandize"));
+        optionsForQuestion2.add (new Option (false, "oxter"));
+        optionsForQuestion2.add (new Option (false, "agog"));
         Question question2 = new Question (2,
-            "Which country has the highest number of bars per person?",
+            "To increase in size or intensity",
             optionsForQuestion2);
         questions.add (question2);
+        
+        List<Option> optionsForQuestion3 = new ArrayList<> ();
+        optionsForQuestion3.add (new Option (false, "gainsay"));
+        optionsForQuestion3.add (new Option (true, "middling"));
+        optionsForQuestion3.add (new Option (false, "moonbow"));
+        optionsForQuestion3.add (new Option (false, "quidnunc"));
+        Question question3 = new Question (3,
+            "Mediocre or ordinary",
+            optionsForQuestion3);
+        questions.add (question3);
+        
+        List<Option> optionsForQuestion4 = new ArrayList<> ();
+        optionsForQuestion4.add (new Option (false, "blithe"));
+        optionsForQuestion4.add (new Option (false, "cynosure"));
+        optionsForQuestion4.add (new Option (false, "syzygy"));
+        optionsForQuestion4.add (new Option (true, "hidebound"));
+        Question question4 = new Question (4,
+            "Narrow and rigid in opinion",
+            optionsForQuestion4);
+        questions.add (question4);
+        
+        List<Option> optionsForQuestion5 = new ArrayList<> ();
+        optionsForQuestion5.add (new Option (true, "scroop"));
+        optionsForQuestion5.add (new Option (false, "bucolic"));
+        optionsForQuestion5.add (new Option (false, "pifle"));
+        optionsForQuestion5.add (new Option (false, "aver"));
+        Question question5 = new Question (5,
+            "To emit a harsh, grating sound",
+            optionsForQuestion5);
+        questions.add (question5);
     }
 
     @Override
     public String getQuizName ()
     {
         // TODO Auto-generated method stub
-        return "Hi Quiz!";
+        return "Words";
     }
 
     @Override
@@ -69,6 +99,7 @@ public class QuizEngine
             if (q.getGivenAnswer ().equals (opt.getOption ()))
             {
                 return opt.isCorrectAnswer ();
+                
             }
         }
         return false;
@@ -81,7 +112,8 @@ public class QuizEngine
         {
             if (isCorrect (question))
             {
-                builder.append ("   ");
+                //builder.append ("   ");
+               
             }
 
             else
@@ -100,13 +132,14 @@ public class QuizEngine
                 if (o.isCorrectAnswer ())
                 {
                     builder.append (o.getOption ());
+                   
+                        
                 }
             }
 
-            builder.append ("\n");
+            builder.append ("<br/>");
 
         }
         return builder.toString ();
     }
-
 }

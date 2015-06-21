@@ -14,9 +14,12 @@
 	class = "org.springframework.web.servlet.view.BeanNameViewResolver"/>
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	<constructor-arg value=" /form.jsp" />
+		<property name="prefix">
+			<value>/WEB-INF/views/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
 	</bean>
-	
-	<bean id = "normal" class="org.springframework.web.servlet.view."
-	
+
 </beans>

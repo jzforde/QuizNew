@@ -1,11 +1,24 @@
 package org.biz.xml;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+
+@Entity
 public class Option
 {
+    @Id
+    private int id;
+    
+    @Column(name="CORRECT_ANSWER")
     private boolean correctAnswer; 
+    
+    @Column(name="OPTIONS")
+    @Enumerated(EnumType.STRING)
     private String option;
     
-  
     
     //List<Option> options = new ArrayList<>();
     
