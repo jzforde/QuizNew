@@ -1,3 +1,8 @@
+/*
+This is the core of my quiz. It contains a list of 5 questions with the question, possible answers and the right and wrong answers
+I used a boolean to represent if the answer is correct or incorrect. 
+*/
+
 package org.biz.xml;
 
 import java.util.ArrayList;
